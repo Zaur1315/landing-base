@@ -8,8 +8,6 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
-Route::get('/thank-you', [PageController::class, 'thankYou'])->name('thank-you');
-
 Route::get('/privacy.html', [PageController::class, 'privacy'])->name('privacy');
 Route::get('/terms.html', [PageController::class, 'terms'])->name('terms');
 

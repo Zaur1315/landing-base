@@ -10,12 +10,7 @@ class PageController extends Controller
 {
     public function home(): View
     {
-        return view('home');
-    }
-
-    public function thankYou(): View
-    {
-        return view('thank-you', [
+        return view('home', [
             'leadEventId' => session()->pull('meta_lead_event_id'),
         ]);
     }

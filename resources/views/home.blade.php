@@ -137,6 +137,18 @@
                 </div>
             </div>
         </footer>
+
+        @if(session('success'))
+            <div class="success-popup" id="success-popup">
+                <div class="success-popup-card">
+                    <button type="button" class="success-popup-close" onclick="closeSuccessPopup()">×</button>
+
+                    <p class="eyebrow">Request Received</p>
+                    <h3>Thank you.</h3>
+                    <p>{{ session('success') }}</p>
+                </div>
+            </div>
+        @endif
     </main>
 
     <script>
@@ -149,5 +161,19 @@
 
             eventIdInput.value = eventId;
         }
+
+        function closeSuccessPopup() {
+            const popup = document.getElementById('success-popup');
+
+            if (popup) {
+                popup.remove();
+            }
+        }
+
+        @if(config('services.meta.pixel_id') && $leadEventId)
+        fbq('track', 'Lead', {}, {
+            eventID: @json($leadEventId)
+        });
+        @endif
     </script>
 @endsection

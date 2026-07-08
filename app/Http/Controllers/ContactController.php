@@ -37,10 +37,10 @@ class ContactController extends Controller
             sourceUrl: $request->headers->get('referer') ?: url('/')
         );
 
-        session()->put('meta_lead_event_id', $eventId);
+        session()->flash('meta_lead_event_id', $eventId);
 
         return redirect()
-            ->route('thank-you')
+            ->to(route('home') . '#contact')
             ->with('success', 'Thank you. Your request has been received.');
     }
 }
