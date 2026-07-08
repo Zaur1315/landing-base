@@ -5,8 +5,7 @@
         <header class="topbar">
             <div class="container topbar-inner">
                 <a href="{{ route('home') }}" class="brand">
-                    <span>50</span>
-                    Equipment
+                    <img src="/logo.png" alt="logo" id="header-logo">
                 </a>
 
                 <nav class="nav">
@@ -44,7 +43,7 @@
                 </div>
 
                 <div class="hero-panel">
-                    <div class="panel-number">50</div>
+                    <img src="/logo.png" alt="logo" id="ban-logo">
                     <h2>Equipment sourcing support for real jobsite needs.</h2>
                     <p>
                         Tell us what you are looking for. We will review the request and follow up with practical next
@@ -232,8 +231,7 @@
         <footer class="footer">
             <div class="container footer-inner">
                 <div>
-                    <a href="{{ route('home') }}" class="footer-brand">{{ config('company.name') }}</a>
-                    <p>{{ config('company.legal_name') }}</p>
+                    <img src="/logo.png" alt="logo" id="footer-logo">
                 </div>
 
                 <div class="footer-links">
