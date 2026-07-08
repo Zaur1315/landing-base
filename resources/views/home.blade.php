@@ -143,7 +143,11 @@
         const eventIdInput = document.getElementById('event_id');
 
         if (eventIdInput) {
-            eventIdInput.value = 'lead_' + Date.now() + '_' + Math.random().toString(16).slice(2);
+            const eventId = window.crypto && window.crypto.randomUUID
+                ? 'lead_' + window.crypto.randomUUID()
+                : 'lead_' + Date.now() + '_' + Math.random().toString(16).slice(2);
+
+            eventIdInput.value = eventId;
         }
     </script>
 @endsection

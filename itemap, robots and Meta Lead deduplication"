@@ -1,0 +1,15 @@
+[90m= [39m[34;4mApp\Models\ContactSubmission[39;24m {#8110
+    [34mid[39m: [35m1[39m,
+    [34mcompany_key[39m: [32m"[39m[32mdefault[39m[32m"[39m,
+    [34mname[39m: [32m"[39m[32mZaur Huseynzade[39m[32m"[39m,
+    [34memail[39m: [32m"[39m[32mzaur.quseynzade@gmail.com[39m[32m"[39m,
+    [34mphone[39m: [32m"[39m[32m0703492733[39m[32m"[39m,
+    [34mmessage[39m: [32m"[39m[32mфыыыф[39m[32m"[39m,
+    [34mevent_id[39m: [32m"[39m[32mlead_43b1be93-6392-4676-8a73-7f44934a111c[39m[32m"[39m,
+    [34mip[39m: [32m"[39m[32m127.0.0.1[39m[32m"[39m,
+    [34muser_agent[39m: [32m"[39m[32mMozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36[39m[32m"[39m,
+    [34memail_sent_at[39m: [36mnull[39m,
+    [34mmeta_capi_sent_at[39m: [36mnull[39m,
+    [34mcreated_at[39m: [32m"[39m[32m2026-07-08 19:05:34[39m[32m"[39m,
+    [34mupdated_at[39m: [32m"[39m[32m2026-07-08 19:05:34[39m[32m"[39m,
+  }

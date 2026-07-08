@@ -16,7 +16,13 @@
         </section>
     </main>
 
-    @if(config('services.meta.pixel_id'))
+    @if(config('services.meta.pixel_id') && $leadEventId)
+        <script>
+            fbq('track', 'Lead', {}, {
+                eventID: '{{ $leadEventId }}'
+            });
+        </script>
+    @elseif(config('services.meta.pixel_id'))
         <script>
             fbq('track', 'Lead');
         </script>

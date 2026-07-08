@@ -1,21 +1,19 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'home')->name('home');
+Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
-Route::view('/thank-you', 'thank-you')->name('thank-you');
+Route::get('/thank-you', [PageController::class, 'thankYou'])->name('thank-you');
 
-Route::view('/privacy.html', 'legal.privacy')->name('privacy');
-Route::view('/terms.html', 'legal.terms')->name('terms');
+Route::get('/privacy.html', [PageController::class, 'privacy'])->name('privacy');
+Route::get('/terms.html', [PageController::class, 'terms'])->name('terms');
 
-Route::get('/webmail', function () {
-    $url = config('services.webmail.url');
+Route::get('/webmail', [PageController::class, 'webmail'])->name('webmail');
 
-    abort_unless($url, 404);
-
-    return redirect()->away($url);
-})->name('webmail');
+Route::get('/robots.txt', [PageController::class, 'robots'])->name('robots');
+Route::get('/sitemap.xml', [PageController::class, 'sitemap'])->name('sitemap');
