@@ -1,0 +1,254 @@
+:root {
+    --bg: #111827;
+    --surface: #1f2937;
+    --muted: #f3f4f6;
+    --text: #111827;
+    --light-text: #f9fafb;
+    --subtle: #6b7280;
+    --accent: #f6c453;
+    --border: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: #fff;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.narrow {
+    width: min(760px, calc(100% - 40px));
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(17, 24, 39, 0.94);
+    color: var(--light-text);
+    backdrop-filter: blur(12px);
+}
+
+.header-inner,
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 0;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 22px;
+}
+
+.nav a,
+.footer a {
+    text-decoration: none;
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.96), rgba(31, 41, 55, 0.92)),
+    radial-gradient(circle at top right, rgba(246, 196, 83, 0.2), transparent 40%);
+    color: var(--light-text);
+    padding: 96px 0;
+}
+
+.hero-centered {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-grid,
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 13px;
+}
+
+h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 0.95;
+    margin: 12px 0 24px;
+}
+
+h2 {
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.05;
+    margin: 10px 0 18px;
+}
+
+.hero-text,
+.section p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 14px 22px;
+    font-weight: 800;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #111827;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--light-text);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 28px;
+    padding: 32px;
+}
+
+.section {
+    padding: 84px 0;
+}
+
+.section-muted {
+    background: var(--muted);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 32px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+    font-weight: 800;
+}
+
+.form {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 24px 70px rgba(17, 24, 39, 0.08);
+}
+
+.form label {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 13px 14px;
+    font: inherit;
+}
+
+.form span {
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+.contact-info {
+    margin-top: 24px;
+}
+
+.footer {
+    background: var(--bg);
+    color: var(--light-text);
+}
+
+.footer-inner div {
+    display: flex;
+    gap: 18px;
+}
+
+.legal-page {
+    padding: 72px 0;
+}
+
+.legal-page h1 {
+    color: var(--text);
+}
+
+.legal-page p {
+    line-height: 1.75;
+}
+
+@media (max-width: 800px) {
+    .header-inner,
+    .footer-inner,
+    .nav,
+    .footer-inner div {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hero-grid,
+    .contact-grid,
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 72px 0;
+    }
+}
