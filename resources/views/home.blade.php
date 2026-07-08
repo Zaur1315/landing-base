@@ -2,138 +2,244 @@
 
 @section('content')
     <main class="site">
-        <header class="header">
-            <div class="container header-inner">
-                <a href="{{ route('home') }}" class="brand">{{ config('company.name') }}</a>
+        <header class="topbar">
+            <div class="container topbar-inner">
+                <a href="{{ route('home') }}" class="brand">
+                    <span>50</span>
+                    Equipment
+                </a>
 
                 <nav class="nav">
-                    <a href="#about">About</a>
-                    <a href="#equipment">Equipment</a>
+                    <a href="#inventory-support">Equipment</a>
+                    <a href="#process">Process</a>
                     <a href="#contact">Contact</a>
                 </nav>
+
+                <a href="#contact" class="header-cta">Request Info</a>
             </div>
         </header>
 
         <section class="hero">
-            <div class="container hero-grid">
-                <div>
-                    <p class="eyebrow">Heavy Equipment Sales</p>
-                    <h1>Reliable equipment support for local buyers and businesses.</h1>
+            <div class="hero-bg">
+                <img src="/images/image-1.webp" alt="{{ config('company.name') }} heavy equipment">
+            </div>
+
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow">New Port Richey, Florida</p>
+
+                    <h1>Used heavy equipment without the runaround.</h1>
+
                     <p class="hero-text">
-                        {{ config('company.name') }} helps customers find practical heavy, construction,
-                        utility, and commercial equipment without unnecessary complications.
+                        {{ config('company.name') }} helps buyers source practical construction, utility,
+                        farm, truck, and commercial equipment with clear communication and a simple request process.
                     </p>
+
                     <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">Request Information</a>
-                        <a href="mailto:{{ config('company.email') }}" class="btn btn-secondary">
+                        <a href="#contact" class="btn btn-primary">Send Equipment Request</a>
+                        <a href="mailto:{{ config('company.email') }}" class="btn btn-ghost">
                             {{ config('company.email') }}
                         </a>
                     </div>
                 </div>
 
-                <div class="hero-card">
-                    <h2>Equipment-focused. Simple process.</h2>
+                <div class="hero-panel">
+                    <div class="panel-number">50</div>
+                    <h2>Equipment sourcing support for real jobsite needs.</h2>
                     <p>
-                        Tell us what you are looking for, and our team will follow up with available options,
-                        details, and next steps.
+                        Tell us what you are looking for. We will review the request and follow up with practical next
+                        steps.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="section">
-            <div class="container narrow">
-                <p class="eyebrow">About Us</p>
-                <h2>Local equipment sales company</h2>
-                <p>
-                    {{ config('company.legal_name') }} is a Florida-based equipment sales company focused on
-                    straightforward communication, practical equipment support, and responsive customer service.
-                </p>
-            </div>
-        </section>
-
-        <section id="equipment" class="section section-muted">
-            <div class="container">
-                <p class="eyebrow">What We Help With</p>
-                <h2>Equipment categories</h2>
-
-                <div class="cards">
-                    <div class="card">Used Heavy Equipment</div>
-                    <div class="card">Construction Equipment</div>
-                    <div class="card">Farm & Utility Equipment</div>
-                    <div class="card">Trucks & Trailers</div>
-                    <div class="card">Equipment Sourcing</div>
-                    <div class="card">Sales Support</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container contact-grid">
+        <section class="intro-strip">
+            <div class="container intro-grid">
                 <div>
-                    <p class="eyebrow">Contact</p>
-                    <h2>Send a request</h2>
+                    <span class="strip-label">01</span>
+                    <strong>Heavy Equipment</strong>
+                    <p>Construction, utility, farm, trucks, trailers, and commercial-use machines.</p>
+                </div>
+
+                <div>
+                    <span class="strip-label">02</span>
+                    <strong>Local Florida Company</strong>
+                    <p>Based in New Port Richey and focused on straightforward buyer communication.</p>
+                </div>
+
+                <div>
+                    <span class="strip-label">03</span>
+                    <strong>Simple Follow-Up</strong>
+                    <p>Submit the request, share your target equipment, and our team responds directly.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="inventory-support" class="section equipment-section">
+            <div class="container equipment-layout">
+                <div class="section-heading">
+                    <p class="eyebrow">Equipment Support</p>
+                    <h2>Tell us what type of machine you need.</h2>
                     <p>
-                        Share what type of equipment you are looking for. We will review your request
-                        and get back to you.
+                        We keep the process direct. Whether you are comparing used equipment options or trying to locate
+                        a specific machine type, send the details and we will follow up.
+                    </p>
+                </div>
+
+                <div class="equipment-image">
+                    <img src="/images/image-2.webp" alt="Used equipment yard">
+                </div>
+            </div>
+
+            <div class="container equipment-cards">
+                <article>
+                    <span>01</span>
+                    <h3>Construction Equipment</h3>
+                    <p>Loaders, excavators, backhoes, skid steers, compactors, and jobsite support equipment.</p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <h3>Farm & Utility Equipment</h3>
+                    <p>Utility tractors, attachments, trailers, and machines for property or land-use work.</p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <h3>Trucks & Trailers</h3>
+                    <p>Commercial trucks, transport support, trailers, and work-ready vehicle requests.</p>
+                </article>
+
+                <article>
+                    <span>04</span>
+                    <h3>Equipment Sourcing</h3>
+                    <p>Share the equipment type, budget range, and intended use so we can respond with next steps.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="process" class="section process-section">
+            <div class="container process-layout">
+                <div class="process-media">
+                    <img src="/images/image-3.webp" alt="Heavy equipment detail">
+                </div>
+
+                <div>
+                    <p class="eyebrow">Straightforward Process</p>
+                    <h2>No overbuilt system. Just clear communication.</h2>
+
+                    <div class="process-list">
+                        <div>
+                            <span>1</span>
+                            <p>Send the equipment type, condition expectations, and contact details.</p>
+                        </div>
+
+                        <div>
+                            <span>2</span>
+                            <p>We review your request and check what information or options are available.</p>
+                        </div>
+
+                        <div>
+                            <span>3</span>
+                            <p>You receive a direct follow-up with practical details and possible next steps.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section proof-section">
+            <div class="container proof-card">
+                <div>
+                    <p class="eyebrow">Built For Buyers</p>
+                    <h2>Practical equipment support from a local company.</h2>
+                </div>
+
+                <div class="proof-points">
+                    <p>Used heavy equipment inquiries</p>
+                    <p>Commercial and utility machine requests</p>
+                    <p>Florida-based contact and support</p>
+                    <p>Simple form, direct response</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container contact-layout">
+                <div class="contact-copy">
+                    <p class="eyebrow">Contact 50 Equipment</p>
+                    <h2>Request equipment information.</h2>
+                    <p>
+                        Send a short message with the machine type, intended use, budget range, or any specific details.
+                        We will review your request and get back to you.
                     </p>
 
-                    <div class="contact-info">
-                        <p><strong>Email:</strong> <a
-                                href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a></p>
+                    <div class="contact-image">
+                        <img src="/images/image-4.webp" alt="Equipment sales support">
+                    </div>
 
-                        @if(config('company.address'))
-                            <p>
-                                <strong>Address:</strong>
-                                {{ config('company.address') }},
-                                {{ config('company.city') }},
-                                {{ config('company.state') }}
-                                {{ config('company.zip') }}
-                            </p>
-                        @endif
+                    <div class="contact-details">
+                        <p>
+                            <strong>Email</strong>
+                            <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a>
+                        </p>
+
+                        <p>
+                            <strong>Address</strong>
+                            {{ config('company.address') }},
+                            {{ config('company.city') }},
+                            {{ config('company.state') }}
+                            {{ config('company.zip') }}
+                        </p>
                     </div>
                 </div>
 
-                <form method="POST" action="{{ route('contact.store') }}" class="form">
+                <form method="POST" action="{{ route('contact.store') }}" class="lead-form">
                     @csrf
 
                     <input type="hidden" name="event_id" id="event_id">
 
                     <label>
-                        Name *
+                        <span>Name *</span>
                         <input type="text" name="name" value="{{ old('name') }}" required>
-                        @error('name') <span>{{ $message }}</span> @enderror
+                        @error('name') <small>{{ $message }}</small> @enderror
                     </label>
 
                     <label>
-                        Email
+                        <span>Email</span>
                         <input type="email" name="email" value="{{ old('email') }}">
-                        @error('email') <span>{{ $message }}</span> @enderror
+                        @error('email') <small>{{ $message }}</small> @enderror
                     </label>
 
                     <label>
-                        Phone
+                        <span>Phone</span>
                         <input type="text" name="phone" value="{{ old('phone') }}">
-                        @error('phone') <span>{{ $message }}</span> @enderror
+                        @error('phone') <small>{{ $message }}</small> @enderror
                     </label>
 
                     <label>
-                        Message
-                        <textarea name="message" rows="5">{{ old('message') }}</textarea>
-                        @error('message') <span>{{ $message }}</span> @enderror
+                        <span>What equipment are you looking for?</span>
+                        <textarea name="message" rows="6">{{ old('message') }}</textarea>
+                        @error('message') <small>{{ $message }}</small> @enderror
                     </label>
 
-                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                    <button type="submit" class="btn btn-primary form-btn">Submit Request</button>
                 </form>
             </div>
         </section>
 
         <footer class="footer">
             <div class="container footer-inner">
-                <p>© {{ date('Y') }} {{ config('company.legal_name') }}. All rights reserved.</p>
                 <div>
+                    <a href="{{ route('home') }}" class="footer-brand">{{ config('company.name') }}</a>
+                    <p>{{ config('company.legal_name') }}</p>
+                </div>
+
+                <div class="footer-links">
                     <a href="{{ route('privacy') }}">Privacy Policy</a>
                     <a href="{{ route('terms') }}">Terms & Conditions</a>
+                    <a href="{{ route('webmail') }}">Webmail</a>
                 </div>
             </div>
         </footer>
