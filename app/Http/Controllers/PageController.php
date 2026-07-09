@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
 
@@ -29,7 +30,7 @@ class PageController extends Controller
     {
         $url = config('services.webmail.url');
 
-        abort_unless($url, 404);
+        abort_unless(filled($url), 503, 'Webmail is not configured.');
 
         return redirect()->away($url);
     }
