@@ -399,33 +399,12 @@ h3 {
     font-weight: 950;
 }
 
-.proof-section {
-    padding: 70px 0;
-}
-
-.proof-card {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 44px;
-    align-items: start;
-    border-radius: 42px;
-    background: var(--accent);
-    color: var(--bg);
-    padding: 42px;
-}
-
 .proof-card .eyebrow {
     color: rgba(9, 11, 15, 0.7);
 }
 
 .proof-card h2 {
     margin-bottom: 0;
-}
-
-.proof-points {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
 }
 
 .proof-points p {
@@ -654,9 +633,8 @@ h3 {
 }
 
 .footer {
-    background:
-        radial-gradient(circle at top left, rgba(252, 207, 37, 0.13), transparent 34%),
-        var(--bg);
+    background: radial-gradient(circle at top left, rgba(252, 207, 37, 0.13), transparent 34%),
+    var(--bg);
     color: var(--text);
     padding: 44px 0;
     border-top: 1px solid var(--line);
@@ -729,9 +707,10 @@ h3 {
 .footer-links {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 14px;
     color: var(--muted);
+    justify-content: flex-end;
 }
 
 .footer-links a {
@@ -782,7 +761,7 @@ h3 {
     font-weight: 800;
 }
 
-.footer-links strong{
+.footer-links strong {
     margin-bottom: 4px;
     color: #fff;
 }
@@ -791,6 +770,10 @@ h3 {
     .nav,
     .header-cta {
         display: none;
+    }
+
+    .container {
+        width: min(100% - 32px, 1160px);
     }
 
     .hero {
@@ -802,7 +785,8 @@ h3 {
     .equipment-layout,
     .process-layout,
     .contact-layout,
-    .proof-card {
+    .request-panel,
+    .footer-inner {
         grid-template-columns: 1fr;
     }
 
@@ -829,14 +813,42 @@ h3 {
         margin-bottom: 26px;
     }
 
-    .footer-inner,
+    .request-panel {
+        gap: 18px;
+    }
+
+    .request-panel-heading {
+        padding: 30px;
+    }
+
+    .request-panel-list article {
+        grid-template-columns: 54px 1fr;
+    }
+
+    .footer-inner {
+        gap: 28px;
+    }
+
+    .footer-company {
+        gap: 18px;
+    }
+
     .footer-links {
-        flex-direction: column;
         align-items: flex-start;
+        justify-content: flex-start;
     }
 
     .footer-map {
-        min-height: 260px;
+        min-height: 280px;
+        order: 3;
+    }
+
+    .footer-links {
+        order: 2;
+    }
+
+    .footer-company {
+        order: 1;
     }
 }
 
@@ -845,12 +857,41 @@ h3 {
         width: min(100% - 28px, 1160px);
     }
 
+    .topbar-inner {
+        padding: 14px 0;
+    }
+
+    #header-logo {
+        max-width: 104px;
+    }
+
+    #ban-logo {
+        max-width: 160px;
+    }
+
     h1 {
-        font-size: 54px;
+        font-size: 46px;
+        line-height: 0.94;
+        letter-spacing: -0.06em;
     }
 
     h2 {
-        font-size: 40px;
+        font-size: 34px;
+        line-height: 1;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .hero {
+        padding-top: 112px;
+        padding-bottom: 56px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+        line-height: 1.6;
     }
 
     .hero-actions {
@@ -864,12 +905,68 @@ h3 {
 
     .hero-panel,
     .lead-form,
-    .proof-card {
+    .request-panel-heading {
         border-radius: 28px;
         padding: 24px;
     }
 
     .section {
-        padding: 74px 0;
+        padding: 72px 0;
+    }
+
+    .equipment-image,
+    .process-media,
+    .contact-image {
+        border-radius: 28px;
+    }
+
+    .equipment-image img,
+    .process-media img {
+        height: 340px;
+    }
+
+    .contact-image img {
+        height: 220px;
+    }
+
+    .request-panel-list article {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    .request-panel-list span {
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+    }
+
+    .footer {
+        padding: 36px 0;
+    }
+
+    .footer-map {
+        min-height: 240px;
+        border-radius: 22px;
+    }
+
+    .footer-map iframe {
+        min-height: 240px;
+    }
+
+    .footer-links {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .footer-links a {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    #footer-logo {
+        max-width: 92px;
     }
 }

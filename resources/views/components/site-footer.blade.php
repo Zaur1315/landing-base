@@ -48,7 +48,6 @@
             <strong>Quick Links</strong>
             <a href="{{ route('privacy') }}">Privacy Policy</a>
             <a href="{{ route('terms') }}">Terms & Conditions</a>
-            <a href="{{ route('webmail') }}">Webmail</a>
         </div>
     </div>
 </footer>
