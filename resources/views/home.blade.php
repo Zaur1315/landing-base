@@ -2,21 +2,7 @@
 
 @section('content')
     <main class="site">
-        <header class="topbar">
-            <div class="container topbar-inner">
-                <a href="{{ route('home') }}" class="brand">
-                    <img src="/logo.png" alt="logo" id="header-logo">
-                </a>
-
-                <nav class="nav">
-                    <a href="#inventory-support">Equipment</a>
-                    <a href="#process">Process</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-
-                <a href="#contact" class="header-cta">Request Info</a>
-            </div>
-        </header>
+        <x-site-header/>
 
         <section class="hero">
             <div class="hero-bg">
@@ -56,19 +42,19 @@
         <section class="intro-strip">
             <div class="container intro-grid">
                 <div>
-                    <span class="strip-label">01</span>
+                    <span class="strip-label">1</span>
                     <strong>Heavy Equipment</strong>
                     <p>Construction, utility, farm, trucks, trailers, and commercial-use machines.</p>
                 </div>
 
                 <div>
-                    <span class="strip-label">02</span>
+                    <span class="strip-label">2</span>
                     <strong>Local Florida Company</strong>
                     <p>Based in New Port Richey and focused on straightforward buyer communication.</p>
                 </div>
 
                 <div>
-                    <span class="strip-label">03</span>
+                    <span class="strip-label">3</span>
                     <strong>Simple Follow-Up</strong>
                     <p>Submit the request, share your target equipment, and our team responds directly.</p>
                 </div>
@@ -93,25 +79,25 @@
 
             <div class="container equipment-cards">
                 <article>
-                    <span>01</span>
+                    <span>1</span>
                     <h3>Construction Equipment</h3>
                     <p>Loaders, excavators, backhoes, skid steers, compactors, and jobsite support equipment.</p>
                 </article>
 
                 <article>
-                    <span>02</span>
+                    <span>2</span>
                     <h3>Farm & Utility Equipment</h3>
                     <p>Utility tractors, attachments, trailers, and machines for property or land-use work.</p>
                 </article>
 
                 <article>
-                    <span>03</span>
+                    <span>3</span>
                     <h3>Trucks & Trailers</h3>
                     <p>Commercial trucks, transport support, trailers, and work-ready vehicle requests.</p>
                 </article>
 
                 <article>
-                    <span>04</span>
+                    <span>4</span>
                     <h3>Equipment Sourcing</h3>
                     <p>Share the equipment type, budget range, and intended use so we can respond with next steps.</p>
                 </article>
@@ -148,18 +134,49 @@
             </div>
         </section>
 
-        <section class="section proof-section">
-            <div class="container proof-card">
-                <div>
-                    <p class="eyebrow">Built For Buyers</p>
-                    <h2>Practical equipment support from a local company.</h2>
+        <section class="section request-snapshot-section">
+            <div class="container request-panel">
+                <div class="request-panel-heading">
+                    <p class="eyebrow">Before You Contact Us</p>
+                    <h2>Send the details that help us respond faster.</h2>
+                    <p>
+                        A short, clear request is enough. Tell us what you need, how the equipment will be used,
+                        and where it needs to go.
+                    </p>
                 </div>
 
-                <div class="proof-points">
-                    <p>Used heavy equipment inquiries</p>
-                    <p>Commercial and utility machine requests</p>
-                    <p>Florida-based contact and support</p>
-                    <p>Simple form, direct response</p>
+                <div class="request-panel-list">
+                    <article>
+                        <span>1</span>
+                        <div>
+                            <h3>Machine Type</h3>
+                            <p>Loader, excavator, tractor, trailer, truck, skid steer, attachment, or another equipment type.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span>2</span>
+                        <div>
+                            <h3>Use Case</h3>
+                            <p>Jobsite work, land clearing, hauling, property maintenance, farm use, or commercial support.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span>3</span>
+                        <div>
+                            <h3>Condition Range</h3>
+                            <p>Work-ready, budget-friendly, lower-hour, specific year range, or any must-have details.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span>4</span>
+                        <div>
+                            <h3>Location & Timing</h3>
+                            <p>Where the equipment is needed and how soon you are looking to move forward.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -178,20 +195,6 @@
                         <img src="/images/image-4.webp" alt="Equipment sales support">
                     </div>
 
-                    <div class="contact-details">
-                        <p>
-                            <strong>Email</strong>
-                            <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a>
-                        </p>
-
-                        <p>
-                            <strong>Address</strong>
-                            {{ config('company.address') }},
-                            {{ config('company.city') }},
-                            {{ config('company.state') }}
-                            {{ config('company.zip') }}
-                        </p>
-                    </div>
                 </div>
 
                 <form method="POST" action="{{ route('contact.store') }}" class="lead-form">
@@ -228,19 +231,7 @@
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="container footer-inner">
-                <div>
-                    <img src="/logo.png" alt="logo" id="footer-logo">
-                </div>
-
-                <div class="footer-links">
-                    <a href="{{ route('privacy') }}">Privacy Policy</a>
-                    <a href="{{ route('terms') }}">Terms & Conditions</a>
-                    <a href="{{ route('webmail') }}">Webmail</a>
-                </div>
-            </div>
-        </footer>
+        <x-site-footer/>
 
         @if(session('success'))
             <div class="success-popup" id="success-popup">
