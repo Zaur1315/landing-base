@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'webmail' => [
+        'url' => env('WEBMAIL_URL'),
+    ],
+
 ];
