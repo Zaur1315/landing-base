@@ -37,8 +37,6 @@
             <a href="{{ route('home') }}">
                 <img src="/logo.png" alt="{{ config('company.name') }} logo" id="footer-logo">
             </a>
-
-            <p>{{ config('company.legal_name') }}</p>
         </div>
 
         <div class="rural-footer-contact">

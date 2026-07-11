@@ -3,9 +3,14 @@
 @section('title', 'Privacy Policy | ' . config('company.name'))
 
 @section('content')
-    <main class="legal-page">
-        <div class="container narrow">
-            <h1>Privacy Policy</h1>
+    <main class="site legal-site">
+        <x-site-header />
+
+        <section class="legal-page">
+            <div class="container legal-container">
+                <p class="eyebrow">{{ config('company.legal_name') }}</p>
+
+                <h1>Privacy Policy</h1>
 
             <p>Last updated: {{ date('F j, Y') }}</p>
 
@@ -46,6 +51,9 @@
             </p>
 
             <p><a href="{{ route('home') }}">Back to Home</a></p>
-        </div>
+            </div>
+        </section>
+
+        <x-site-footer />
     </main>
 @endsection

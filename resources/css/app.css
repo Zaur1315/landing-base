@@ -51,14 +51,14 @@ p {
 h1 {
     margin-bottom: 24px;
     max-width: 760px;
-    font-size: clamp(48px, 6.8vw, 92px);
+    font-size: clamp(48px, 6.8vw, 84px);
     line-height: 0.94;
     letter-spacing: -0.06em;
 }
 
 h2 {
     margin-bottom: 18px;
-    font-size: clamp(36px, 5vw, 68px);
+    font-size: clamp(36px, 5vw, 56px);
     line-height: 0.96;
     letter-spacing: -0.055em;
 }
@@ -137,12 +137,12 @@ h3 {
 }
 
 #header-logo {
-    max-width: 138px;
+    max-width: 158px;
 }
 
 .rural-nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 12px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -176,7 +176,7 @@ h3 {
 }
 
 .site {
-    padding-top: 112px;
+    padding-top: 105px;
 }
 
 /* Hero */
@@ -412,10 +412,6 @@ h3 {
     margin: 8px 0 0;
 }
 
-.site {
-    padding-top: 112px;
-}
-
 /* Process */
 
 .field-process-section {
@@ -483,7 +479,7 @@ h3 {
 
 .buyer-guide {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 0.8fr 1.2fr;
     gap: 44px;
     align-items: start;
 }
@@ -499,7 +495,7 @@ h3 {
 }
 
 .guide-cards article {
-    min-height: 230px;
+    min-height: 200px;
     border: 1px solid rgba(255, 255, 255, 0.13);
     border-radius: 28px;
     background: rgba(255, 255, 255, 0.06);
@@ -508,10 +504,10 @@ h3 {
 
 .guide-cards strong {
     display: block;
-    margin-bottom: 54px;
+    margin-bottom: 34px;
     color: var(--sand);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 950;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -690,7 +686,7 @@ h3 {
 }
 
 #footer-logo {
-    max-width: 112px;
+    max-width: 152px;
 }
 
 .rural-footer-brand p {
