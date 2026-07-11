@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 :root {
     --bg: #090b0f;
     --bg-2: #11161f;
@@ -14,6 +16,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
 
 html {
