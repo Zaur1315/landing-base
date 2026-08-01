@@ -26,5 +26,6 @@
 </head>
 <body>
 @yield('content')
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a6e11cc26a343b92b1a008b" data-source="WEB_USER"></script>
 </body>
 </html>

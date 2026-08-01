@@ -139,7 +139,7 @@
             <div class="container buyer-guide">
                 <div>
                     <p class="eyebrow">Buyer Guide</p>
-                    <h2>Before sending the form, include the details that matter.</h2>
+                    <h2>Before reaching out, include the details that matter.</h2>
                 </div>
 
                 <div class="guide-cards">
@@ -187,78 +187,13 @@
                     </div>
                 </div>
 
-                <form method="POST" action="{{ route('contact.store') }}" class="lead-form">
-                    @csrf
-
-                    <input type="hidden" name="event_id" id="event_id">
-
-                    <label>
-                        <span>Name *</span>
-                        <input type="text" name="name" value="{{ old('name') }}" required>
-                        @error('name') <small>{{ $message }}</small> @enderror
-                    </label>
-
-                    <label>
-                        <span>Email</span>
-                        <input type="email" name="email" value="{{ old('email') }}">
-                        @error('email') <small>{{ $message }}</small> @enderror
-                    </label>
-
-                    <label>
-                        <span>Phone</span>
-                        <input type="text" name="phone" value="{{ old('phone') }}">
-                        @error('phone') <small>{{ $message }}</small> @enderror
-                    </label>
-
-                    <label>
-                        <span>Equipment details</span>
-                        <textarea name="message" rows="6">{{ old('message') }}</textarea>
-                        @error('message') <small>{{ $message }}</small> @enderror
-                    </label>
-
-                    <button type="submit" class="btn btn-primary form-btn">Submit Request</button>
-                </form>
+                <div class="contact-photo">
+                    <img src="/images/image-6.webp" alt="A & D Heavy Equipment">
+                </div>
             </div>
         </section>
 
         <x-site-footer />
 
-        @if(session('success'))
-            <div class="success-popup" id="success-popup">
-                <div class="success-popup-card">
-                    <button type="button" class="success-popup-close" onclick="closeSuccessPopup()">×</button>
-
-                    <p class="eyebrow">Request Received</p>
-                    <h3>Thank you.</h3>
-                    <p>{{ session('success') }}</p>
-                </div>
-            </div>
-        @endif
     </main>
-
-    <script>
-        const eventIdInput = document.getElementById('event_id');
-
-        if (eventIdInput) {
-            const eventId = window.crypto && window.crypto.randomUUID
-                ? 'lead_' + window.crypto.randomUUID()
-                : 'lead_' + Date.now() + '_' + Math.random().toString(16).slice(2);
-
-            eventIdInput.value = eventId;
-        }
-
-        function closeSuccessPopup() {
-            const popup = document.getElementById('success-popup');
-
-            if (popup) {
-                popup.remove();
-            }
-        }
-
-        @if(config('services.meta.pixel_id') && $leadEventId)
-        fbq('track', 'Lead', {}, {
-            eventID: @json($leadEventId)
-        });
-        @endif
-    </script>
 @endsection

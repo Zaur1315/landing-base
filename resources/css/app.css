@@ -563,51 +563,19 @@ h3 {
     color: var(--green-dark);
 }
 
-.lead-form {
+.contact-photo {
     border: 1px solid var(--line);
     border-radius: 26px 64px 26px 64px;
-    background: var(--surface);
-    padding: 36px;
+    overflow: hidden;
     box-shadow: 0 28px 90px rgba(39, 53, 31, 0.1);
 }
 
-.lead-form label {
-    display: grid;
-    gap: 9px;
-    margin-bottom: 18px;
-}
-
-.lead-form label span {
-    color: var(--green-dark);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-}
-
-.lead-form input,
-.lead-form textarea {
+.contact-photo img {
+    display: block;
     width: 100%;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    background: #fbf8ef;
-    padding: 15px 16px;
-    color: var(--ink);
-    font: inherit;
-    outline: none;
-}
-
-.lead-form input:focus,
-.lead-form textarea:focus {
-    border-color: var(--green);
-    background: #fff;
-}
-
-.lead-form small {
-    color: var(--danger);
-}
-
-.form-btn {
-    width: 100%;
-    margin-top: 6px;
+    height: 100%;
+    min-height: 460px;
+    object-fit: cover;
 }
 
 /* Footer */
@@ -729,50 +697,6 @@ h3 {
 .rural-footer-links a:hover,
 .rural-footer-contact a:hover {
     color: var(--sand);
-}
-
-/* popup */
-
-.success-popup {
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    background: rgba(39, 53, 31, 0.6);
-    backdrop-filter: blur(8px);
-}
-
-.success-popup-card {
-    position: relative;
-    width: min(470px, 100%);
-    border-radius: 32px;
-    background: var(--surface);
-    padding: 34px;
-    box-shadow: 0 34px 120px rgba(39, 53, 31, 0.26);
-}
-
-.success-popup-card h3 {
-    font-size: 40px;
-}
-
-.success-popup-card p {
-    color: var(--muted);
-    line-height: 1.6;
-}
-
-.success-popup-close {
-    position: absolute;
-    top: 18px;
-    right: 20px;
-    border: 0;
-    background: transparent;
-    color: var(--ink);
-    font-size: 34px;
-    line-height: 1;
-    cursor: pointer;
 }
 
 /* Legal pages */
@@ -1000,10 +924,9 @@ h3 {
     }
 
     .contact-card,
-    .lead-form,
+    .contact-photo,
     .support-note {
         border-radius: 28px;
-        padding: 24px;
     }
 
     .container {
@@ -1118,10 +1041,9 @@ h3 {
     }
 
     .contact-card,
-    .lead-form,
+    .contact-photo,
     .support-note {
         border-radius: 28px;
-        padding: 24px;
     }
 
     .rural-footer {
